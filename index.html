@@ -202,6 +202,7 @@
           oferta: cols[3]?.innerText.trim().toLowerCase() === 'sí' || cols[3]?.innerText.trim().toLowerCase() === 'si',
           categoria: cols[4]?.innerText.trim(),
           nuevo: cols[5]?.innerText.trim().toLowerCase() === 'sí' || cols[5]?.innerText.trim().toLowerCase() === 'si',
+          talla: cols[6]?.innerText.trim(),
         });
       }
       return products;
@@ -225,6 +226,7 @@
       div.innerHTML = `
         <img src="${p.imagen || 'https://via.placeholder.com/200x250'}" alt="${p.nombre}" />
         <p><strong>${p.nombre}</strong></p>
+        <p><em>Tallas: ${p.talla || 'Única'}</em></p>
         <p>Q${p.precio}</p>
       `;
       container.appendChild(div);
