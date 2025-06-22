@@ -198,7 +198,7 @@
         products.push({
           nombre: cols[0]?.innerText.trim(),
           precio: cols[1]?.innerText.trim(),
-          imagen: cols[2]?.querySelector("a")?.href || cols[2]?.innerText.trim(),
+          imagen: cols[2]?.innerText.trim(),
           oferta: cols[3]?.innerText.trim().toLowerCase() === 'sí' || cols[3]?.innerText.trim().toLowerCase() === 'si',
           categoria: cols[4]?.innerText.trim(),
           nuevo: cols[5]?.innerText.trim().toLowerCase() === 'sí' || cols[5]?.innerText.trim().toLowerCase() === 'si',
